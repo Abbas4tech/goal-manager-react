@@ -11,9 +11,17 @@ const Form = (props) => {
     const userInputval = { goal, id: Math.random().toString() };
     if (!goal) {
       setError({
-        title: "Oops! Soething went wrong.",
+        title: "Oops! Something went wrong.",
         message: "Please enter valid input (non-empty-value)",
       });
+      return;
+    }
+    if (isNaN(+goal) === false) {
+      setError({
+        title: "Opps!",
+        message: "Input must contain alphabatical characters ",
+      });
+      setGoal("");
       return;
     }
     console.log(userInputval);
