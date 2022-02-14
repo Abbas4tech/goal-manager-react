@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "./UI/Button";
 
 const Form = (props) => {
   const [goal, setGoal] = useState("");
@@ -14,23 +15,18 @@ const Form = (props) => {
   return (
     <form
       onSubmit={formHandler}
-      className="flex flex-col items-center h-40 mt-12 rounded-lg shadow-md w-96 left-1/2 shadow-slate-700 bg-slate-200"
+      className="w-full p-4 rounded-lg shadow-md x-auto left-1/2 shadow-slate-700 bg-slate-200"
     >
-      <label className="self-start mt-2 ml-4 text-2xl">Goal :</label>
+      <label className="block mb-2 text-xl font-bold">Goal :</label>
       <input
         type="text"
         value={goal}
         onChange={(event) => setGoal(event.target.value)}
-        className="self-center w-11/12 h-8 px-2 mt-2"
+        className="w-full p-1 mb-2"
         placeholder="Enter your goals!"
       />
 
-      <button
-        type="submit"
-        className="self-end w-20 py-2 mt-6 mr-4 text-white transition rounded-md bg-slate-500 hover:bg-slate-900 hover:-translate-y-1 "
-      >
-        Add
-      </button>
+      <Button type="submit">Add</Button>
       {/* <p>{goal}</p> */}
     </form>
   );

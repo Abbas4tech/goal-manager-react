@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <Heading />
-      <section className="flex flex-col items-center justify-between w-full h-fit">
+      <section className="flex flex-col items-center justify-between w-11/12 max-w-2xl mx-auto my-8">
         <Form getDataFromForm={dataFromForm} />
         <GoalList getGoalData={goalsData} deleteHandler={deleteHandler} />
       </section>
