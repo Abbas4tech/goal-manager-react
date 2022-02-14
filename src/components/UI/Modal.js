@@ -13,7 +13,7 @@ const Modal = ({ title, message, errorHandler }) => {
         <div className="p-4 mt-2 text-black bg-white">
           <p>{message}</p>
         </div>
-        <footer className="flex justify-end">
+        <footer className="flex justify-end p-2">
           <Button onPress={errorHandler}>Okay</Button>
         </footer>
       </section>
