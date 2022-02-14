@@ -17,10 +17,6 @@ const goalData = [
 function App() {
   const [goalsData, setGoalsData] = useState(goalData);
   const dataFromForm = (data) => {
-    if (data.goal === "") {
-      alert("Please enter a valid Input!");
-      return;
-    }
     console.log(data);
     setGoalsData([data, ...goalsData]);
   };

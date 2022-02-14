@@ -9,7 +9,7 @@ const GoalList = ({ getGoalData, deleteHandler }) => {
       <ul className="flex flex-col items-center w-full mx-auto mt-4">
         {getGoalData.length === 0 ? (
           <li className="flex items-center justify-center w-full p-3 m-1 text-white rounded-md bg-slate-400">
-            <p className="font-bold">No Goal Found!</p>
+            <p className="p-2 text-xl font-bold text-slate-900">No Goals Found!</p>
           </li>
         ) : (
           getGoalData.map((goal) => (
