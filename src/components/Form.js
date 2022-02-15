@@ -18,7 +18,7 @@ const Form = (props) => {
     }
     if (isNaN(+goal) === false) {
       setError({
-        title: "Opps!",
+        title: "Non valid input!",
         message: "Input must contain alphabatical characters ",
       });
       setGoal("");
@@ -55,7 +55,6 @@ const Form = (props) => {
         />
 
         <Button type="submit">Add</Button>
-        {/* <p>{goal}</p> */}
       </form>
     </>
   );
